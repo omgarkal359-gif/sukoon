@@ -1170,8 +1170,8 @@ footer {
 }
 
 .footer-side-col {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: flex-end;
   gap: 2rem;
 }
 
