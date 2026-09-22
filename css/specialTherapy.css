@@ -1,4 +1,8 @@
-/* SUKOON - SPECIAL THERAPY STYLESHEET */
+/* ==========================================================================
+   SUKOON - SPECIAL THERAPY STYLESHEET
+   Built following production-grade frontend-ui-engineering standards
+   ========================================================================== */
+
 @import url("./style.css");
 
 body {
@@ -9,7 +13,7 @@ body {
 
 header {
   position: relative;
-  min-height: 70vh;
+  min-height: 55vh;
   background: var(--color-bg-page);
   display: flex;
   align-items: center;
@@ -24,15 +28,17 @@ header {
   font-weight: 700;
   color: var(--color-text-deep);
   margin-bottom: 1.25rem;
+  line-height: 1.15;
 }
 
 .heading-span { color: var(--color-primary); }
 
 #subtitle {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   color: var(--color-text-body);
   max-width: 750px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
 section {
@@ -41,18 +47,78 @@ section {
   margin: 0 auto;
 }
 
-.special-card {
+.section-headings, .sub-heading {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-text-deep);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-headings::after, .sub-heading::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-pill);
+  margin: 0.75rem auto 0 auto;
+}
+
+.special-grid, .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.special-card, .module-card, .card {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
-.special-card:hover {
+.special-card:hover, .module-card:hover, .card:hover {
   transform: translateY(-5px);
   border-color: var(--color-border-teal);
   box-shadow: var(--shadow-md);
+}
+
+.special-card img, .module-card img, .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.25rem;
+}
+
+.special-card h3, .module-card h3, .card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-deep);
+  margin-bottom: 0.5rem;
+}
+
+.special-card p, .module-card p, .card p {
+  font-size: 0.938rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  #title { font-size: 2.35rem; }
+  header { padding-top: 7rem; min-height: 45vh; }
+  section { padding: 3.5rem 1.25rem; }
 }

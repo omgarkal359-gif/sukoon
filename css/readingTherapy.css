@@ -1,6 +1,6 @@
 /* ==========================================================================
    SUKOON - READING THERAPY STYLESHEET
-   Aligned with Sukoon Teal & Slate Design System
+   Built following production-grade frontend-ui-engineering standards
    ========================================================================== */
 
 @import url("./style.css");
@@ -11,20 +11,22 @@ body {
   font-family: var(--font-body);
 }
 
+/* Header */
 header {
   position: relative;
-  min-height: 70vh;
+  min-height: 55vh;
   width: 100%;
   background: var(--color-bg-page);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 8rem 1.5rem 4rem 1.5rem;
+  text-align: center;
 }
 
 header .center {
-  text-align: center;
-  max-width: 800px;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 #title {
@@ -33,6 +35,7 @@ header .center {
   font-weight: 700;
   color: var(--color-text-deep);
   margin-bottom: 1.25rem;
+  line-height: 1.15;
 }
 
 .heading-span {
@@ -40,19 +43,19 @@ header .center {
 }
 
 #subtitle {
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   color: var(--color-text-body);
   line-height: 1.7;
 }
 
-/* Reading & Quotes Grid */
+/* Content Sections */
 section {
   padding: 5rem 1.5rem;
   max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
-.sub-heading {
+.section-headings, .sub-heading {
   font-family: var(--font-heading);
   font-size: 2.25rem;
   font-weight: 700;
@@ -61,41 +64,52 @@ section {
   margin-bottom: 3rem;
 }
 
-.sub-heading::after {
+.section-headings::after, .sub-heading::after {
   content: '';
   display: block;
-  width: 60px;
+  width: 50px;
   height: 4px;
   background-color: var(--color-primary);
   border-radius: var(--radius-pill);
   margin: 0.75rem auto 0 auto;
 }
 
-.quote-card, .book-card, .article-card {
+/* Grid Layouts for Articles & Books */
+.articles-grid, .quotes-grid, .books-grid, .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.quote-card, .book-card, .article-card, .card {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   padding: 2rem;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.quote-card:hover, .book-card:hover, .article-card:hover {
+.quote-card:hover, .book-card:hover, .article-card:hover, .card:hover {
   transform: translateY(-5px);
   border-color: var(--color-border-teal);
   box-shadow: var(--shadow-md);
 }
 
 .quote-card p {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-style: italic;
   color: var(--color-text-deep);
   line-height: 1.65;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
 }
 
-.quote-card h4 {
+.quote-card h4, .quote-card h5 {
   font-family: var(--font-heading);
   font-size: 0.95rem;
   font-weight: 700;
@@ -103,20 +117,37 @@ section {
   text-align: right;
 }
 
-/* Button & Link enhancements */
-.btn-explore {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: var(--color-primary);
-  color: #FFFFFF !important;
-  font-weight: 600;
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--radius-md);
-  transition: all var(--transition-fast);
+.book-card img, .article-card img, .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.25rem;
 }
 
-.btn-explore:hover {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-2px);
+.book-card h3, .article-card h3, .card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-deep);
+  margin-bottom: 0.5rem;
+}
+
+.book-card p, .article-card p, .card p {
+  font-size: 0.938rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  #title { font-size: 2.35rem; }
+  header { padding-top: 7rem; min-height: 45vh; }
+  section { padding: 3.5rem 1.25rem; }
 }
