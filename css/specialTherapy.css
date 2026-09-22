@@ -66,49 +66,72 @@ section {
   margin: 0.75rem auto 0 auto;
 }
 
-.special-grid, .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.special-card, .module-card, .card {
+.chatbot-wrapper {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
-  overflow: hidden;
+  margin-top: 1.5rem;
 }
 
-.special-card:hover, .module-card:hover, .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-border-teal);
-  box-shadow: var(--shadow-md);
-}
-
-.special-card img, .module-card img, .card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  margin-bottom: 1.25rem;
-}
-
-.special-card h3, .module-card h3, .card h3 {
+.chatbot-intro h3 {
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
   color: var(--color-text-deep);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.special-card p, .module-card p, .card p {
-  font-size: 0.938rem;
+.chatbot-intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--color-text-body);
-  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.chat-box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.text_box, .input_box {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-page);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text-deep);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.text_box:focus, .input_box:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+.btn.submit {
+  display: inline-block;
+  align-self: center;
+  padding: 0.85rem 2.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+  margin-top: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn.submit:hover {
+  background: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
 }
 
 hr {

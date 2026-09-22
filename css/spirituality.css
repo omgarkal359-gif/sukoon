@@ -66,49 +66,87 @@ section {
   margin: 0.75rem auto 0 auto;
 }
 
-.spiritual-grid, .container {
+.bfit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.5rem;
+}
+
+.bfit img {
+  width: 45%;
+  max-width: 450px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.btext p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+
+/* Ways to Practice Grid */
+.steps-grid, .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
 }
 
-.spiritual-card, .event-card, .card {
+.pt1, .event-card {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 2rem;
+  padding: 1.75rem;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.spiritual-card:hover, .event-card:hover, .card:hover {
+.pt1:hover, .event-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-border-teal);
   box-shadow: var(--shadow-md);
 }
 
-.spiritual-card img, .event-card img, .card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  margin-bottom: 1.25rem;
-}
-
-.spiritual-card h3, .event-card h3, .card h3 {
+.pt-head, .event-card h3 {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-text-deep);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.spiritual-card p, .event-card p, .card p {
+.pt-head i {
+  color: var(--color-primary);
+  font-size: 0.75rem;
+}
+
+.pt1 p, .event-card p {
   font-size: 0.938rem;
   color: var(--color-text-body);
   line-height: 1.6;
+}
+
+.event-meta {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-dark);
 }
 
 hr {

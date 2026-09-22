@@ -51,125 +51,33 @@
   <div class="menu" id="menu">
     <ul class="menu-link">
       <li><a href="../index.html">HOME</a></li>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#services">SPECIAL SERVICES</a></li>
+      <li><a class="close" href="#chatbot">CHATBOT</a></li>
       <li><a href="login.html" class="btn btn-primary" style="margin-top: 1rem;">SignUp / Login</a></li>
     </ul>
   </div>
-    <!-- Navbar Section -->
-    <nav>
-      <a href="../index.html"
-        ><img class="logo" src="../logo.png" alt="Logo"
-      /></a>
 
-      <div class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="../index.html">HOME</a></li>
-          <li><a href="#benefits">BENEFITS</a></li>
-          <li><a href="#aasan">AASANS </a></li>
-          <li><a href="#videos">VIDEOS </a></li>
-        </ul>
-      </div>
-
-      <div class="hamburger" id="ham">
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-width="0"
-          viewBox="0 0 1024 1024"
-          height="1em"
-          width="1em"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
-          ></path>
-        </svg>
-      </div>
-    </nav>
-    <!-- Navbar Section Ends Here -->
-
-    <div class="menu" id="menu">
-      <ul class="menu-link">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a class="close" href="#benefits">BENEFITS</a></li>
-        <li><a class="close" href="#aasan">AASANS</a></li>
-        <li><a class="close" href="#videos">VIDEOS</a></li>
-      </ul>
+  <header>
+    <div class="center">
+      <h1 id="title">Welcome to <br><span class="heading-span">Special Therapy</span></h1>
+      <h3 id="subtitle">Connect with interactive support tools and AI-driven conversational guidance available 24/7.</h3>
     </div>
+  </header>
 
-    <!-- Header Section-->
-    <header>
-      <div class="filter"></div>
-      <div class="text col-lg-5 container-glass">
-        <!-- <<<<<<< HEAD -->
-        <h1 class="title">Speak with Special Therapy 24/7</h1>
+  <section id="chatbot">
+    <h1 class="section-headings">24/7 AI SUPPORT CHATBOT</h1>
+    <div class="chatbot-wrapper">
+      <div class="chatbot-intro">
+        <h3>Would you like to speak with us?</h3>
+        <p>Our interactive AI assistant provides instant, compassionate guidance to help you navigate stress, find appropriate wellness resources, and receive immediate support whenever you need it.</p>
       </div>
-    </header>
-    <!-- Header Section Ends here -->
 
-    <!--Benefits section-->
-    <section class="benefits" id="benefits">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-md-12 text-center">
-            <div class="spacer_small"></div>
-            <h3>Would you like to speak with us?</h3>
-            <div class="spacer"></div>
-
-            <p>
-              Offering a new live chatbot service to my customers could be a
-              great way to improve customer service and help build customer
-              loyalty. A live chatbot is a service that uses artificial
-              intelligence to answer customer inquiries in real time. This type
-              of service can be beneficial for customers who have quick
-              questions or need immediate help with an issue. By providing a
-              live chatbot service, I can help my customers more efficiently and
-              quickly. This can result in better customer satisfaction and
-              increased loyalty. Additionally, the live chatbot can be
-              programmed to understand the customer’s needs and provide accurate
-              answers. This can help reduce the need to transfer customers to a
-              human representative and save time for both the customer and my
-              team. Live chatbot services can be a great way to give my
-              customers the best experience possible.
-            </p>
-          </div>
-        </div>
-        <div class="spacer"></div>
-        <div class="row">
-          <div class="col-md-8">
-            <input
-              placeholder="Hi how can I help you today?"
-              class="text_box"
-            />
-          </div>
-
-          <div class="col-md-4">
-            <lottie-player
-              autoplay
-              loop
-              mode="normal"
-              src="../images/chatbot.json"
-              style="width: 225px"
-            >
-            </lottie-player>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-8">
-            <input
-              placeholder="Start typing here..."
-              class="input_box"
-            />
-        </div>
-    
+      <div class="chat-box-container">
+        <input type="text" placeholder="Hi! How can I help support your well-being today?" class="text_box" readonly />
+        <textarea rows="3" placeholder="Start typing your message here..." class="input_box"></textarea>
+        <button class="btn submit">Send Message</button>
       </div>
-      <div class="spacer"></div>
-
-      <button class="btn submit">SUBMIT</button>
-      <div class="spacer_large"></div>
-
-    </section>
+    </div>
+  </section>
     <!--Benefits section ends-->
 
     <!-- FOOTER -->

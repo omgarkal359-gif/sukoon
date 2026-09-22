@@ -73,42 +73,103 @@ section {
   margin-top: 1.5rem;
 }
 
-.talk-card, .prompt-card, .blog-card, .card {
+.sub {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+}
+
+.container, .blog-container, .video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cause, .blog-box, .video-card {
   background: var(--color-bg-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 2rem;
+  padding: 1.75rem;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-base);
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.talk-card:hover, .prompt-card:hover, .blog-card:hover, .card:hover {
+.cause:hover, .blog-box:hover, .video-card:hover {
   transform: translateY(-5px);
   border-color: var(--color-border-teal);
   box-shadow: var(--shadow-md);
 }
 
-.talk-card img, .blog-card img, .card img {
+.cause h2, .blog-content .blog-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-deep);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.cause p, .blog-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex: 1;
+}
+
+.cause a, .blog-content a {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+.cause a:hover, .blog-content a:hover {
+  color: var(--color-primary-dark);
+}
+
+.blog-img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: 200px;
   border-radius: var(--radius-lg);
+  overflow: hidden;
   margin-bottom: 1.25rem;
 }
 
-.talk-card h3, .blog-card h3, .card h3 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-text-deep);
-  margin-bottom: 0.5rem;
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
 }
 
-.talk-card p, .blog-card p, .card p {
-  font-size: 0.938rem;
-  color: var(--color-text-body);
-  line-height: 1.6;
+.blog-box:hover .blog-img img {
+  transform: scale(1.04);
+}
+
+.blog-content span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.video-container .collection {
+  width: 100%;
+}
+
+.video iframe {
+  width: 100%;
+  height: 260px;
+  border-radius: var(--radius-lg) !important;
+  border: none !important;
 }
 
 hr {

@@ -140,10 +140,99 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* Benefits Section */
+.benefits-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  margin-top: 1.5rem;
+}
+
+.benefits-text h3 {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+
+.benefits-card {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border-teal);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+.benefits-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+}
+
+.benefit-points {
+  font-size: 0.95rem;
+  color: var(--color-text-deep);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Inspiration & Quotes Grid */
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.inspiration-card, .playlist {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.inspiration-card:hover, .playlist:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-border-teal);
+  box-shadow: var(--shadow-md);
+}
+
+.inspcardcover img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.insp-content p {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-text-deep);
+  line-height: 1.6;
+}
+
+iframe {
+  border-radius: var(--radius-lg) !important;
+  border: none !important;
+}
+
 hr {
   border: none;
   border-top: 1px solid var(--color-border);
-  margin: 2rem 0;
+  margin: 2.5rem 0;
 }
 
 @media (max-width: 768px) {
